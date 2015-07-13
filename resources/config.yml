@@ -1,0 +1,11 @@
+# Default config for NotifySounds
+
+# Can non-ops hear NotifySounds? true for yes, false for no
+AllSound: true
+
+# TODO:
+# What sounds will the players hear?
+# Current sounds:
+# BatSound, ClickSound, DoorSound, FizzSound, LaunchSound, PopSound
+# The plugin will not work if this part is wrong
+# Sound: ClickSound
