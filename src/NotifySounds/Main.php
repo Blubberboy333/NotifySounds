@@ -29,8 +29,10 @@ class Main extends PluginBase implements Listener{
 		$this->getLogger()->info(TextFormat::RED . "NotifySound disabled");
 	}
 	
+	// Is NotifySounds enabled?
 	private $enabled = array("on");
 	
+	// Command to disable / enable NotifySounds
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
 		if(strtolower($command->getName()) == "nf"){
 			if(!($sender->hasPermission("notify") || $sender->hasPermission("notify.command") || $sender->hasPermission("notify.command.nf"))){
@@ -65,6 +67,7 @@ class Main extends PluginBase implements Listener{
 		}
 	}
 	
+	// Send the players the sound
 	public function onPlayerChatEvent(PlayerChatEvent $event){
 		$player = $event->getPlayer()->getDisplayName();
 		$sound = $this->getConfig()->get("Sound");
