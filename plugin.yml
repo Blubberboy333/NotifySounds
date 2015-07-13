@@ -1,0 +1,24 @@
+name: NotifySounds
+main: NotifySounds\Main
+version: 0.1.0
+api: [1.12.0]
+commands:
+  nf:
+    usage: /nf <on | off>
+    description: Turn notification sounds on or off
+    permission: notify.command.nf
+permissions:
+  notify:
+    description: Allows the user to use all of the NotifySounds features
+    default: false
+    children:
+      notify.sound:
+        default: true
+        description: Allows the player to hear notifications
+      notify.command:
+        default: false
+        description: Allows the player to run all of the NotifySound commands
+        children:
+          notify.command.nf:
+            default: op
+            description: Allows the player to run the NF command
